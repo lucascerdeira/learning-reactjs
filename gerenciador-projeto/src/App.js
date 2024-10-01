@@ -1,4 +1,6 @@
 import './App.css';
+// como se importa no react
+import HelloWorld from './components/HelloWorld';
 
 function App() {
 const name = 'Lucas'
@@ -11,12 +13,13 @@ const name = 'Lucas'
   const url = "https://via.placeholder.com/150"
 
   return (
-    // no retorno só pode ter um elemento pai, se tirar a div principal vai dar erro
+    
     <div className="App">
       <h1>Olá mundo! React</h1>
       <p>Olá {name}</p>
       <h2>Soma: {sum(12,3)}</h2>
       <img src={url} alt="minha imagem"/>
+      <HelloWorld />
     </div>
   );
 }
