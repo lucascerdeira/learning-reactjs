@@ -1,25 +1,20 @@
 import './App.css';
-// como se importa no react
-import HelloWorld from './components/HelloWorld';
+import SayMyName from './components/SayMyName';
+import Pessoa from './components/Pessoa';
 
 function App() {
-const name = 'Lucas'
-
-
-  function sum(a, b){
-    return a + b
-  }
-
-  const url = "https://via.placeholder.com/150"
+  const name = "Teste"
 
   return (
     
     <div className="App">
-      <h1>Olá mundo! React</h1>
-      <p>Olá {name}</p>
-      <h2>Soma: {sum(12,3)}</h2>
-      <img src={url} alt="minha imagem"/>
-      <HelloWorld />
+      <SayMyName nome="Lucas"/>
+      <SayMyName nome="Nat" />
+      <SayMyName nome={name} />
+      <Pessoa name="Lucas" 
+      idade="28" 
+      profession="Assistente de Desenvolvimento" 
+      foto="https://via.placeholder.com/150"/>
     </div>
   );
 }
